@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta charset="UTF-8"> <meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width" />
+  <title>Serviços Fornecidos</title>
+  
+     <link th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" rel="stylesheet"/>
+     <link th:href="@{/webjars/bootstrap/css/bootstrap-theme.min.css}" rel="stylesheet"/>
+     
+     <style>
+     
+  body {
+       background-color: #98fb98;
+    }
+    .row{
+      margin-left: 120px;
+    }
+    input {
+           margin-left: 550px;
+	       margin-right: 20px;
+	       margin-bottom: 20px;
+     }
+     button {
+	margin-left: 520px;
+	color: 3cb317;
+	background-color: 3cb371;
+     }
+     body h4{
+       margin-left: 530px;
+    }
+
+     .panel-heading{
+            color: 3cb371;
+     }
+     .panel-title{
+               font : normal;
+               font-size : 20px;
+               text-align: center;
+     }
+    .panel-body{
+    color: 4caf50;
+    }
+    .boto{
+         margin-left: 550px;
+    }
+    
+</style>
+   </head>  
+      <body>
+             <div class="panel panel-primary" style="margin: 10px">
+             <div class="panel-heading">
+                 <h1 class="panel-title">Serviços Fornecidos</h1>
+             </div>
+             <br/>
+    <br/>
+    <div class="panel-body">
+    <!-- <form class="form-inline" method="POST" th:action="@{/savarPessoa}" enctype="multipart/form-data">-->
+<br/>
+    <!-- </form> -->
+            <a href="http://localhost:8080/mostraCandidato" class="card bg-transparent text-white text-center p-3">
+             <div class="log"><section class="loginUser"><!--avatar - icon font awesome-->
+             <i class="fa fa-flask fa-3x fa-pb_icon-gradient"></i><!--Call to action-->
+             <h5><span style="color: #2c3e50;"><strong>Candidatos Por Estado</strong></span></h5>
+             </section></div>
+            </a>
+             <br/>
+              <br/>
+            <a href="http://localhost:8080/mostraIcmedio" class="card bg-transparent text-white text-center p-3">
+             <div class="log"><section class="loginUser"><!--avatar - icon font awesome-->
+             <i class="fa fa-flask fa-3x fa-pb_icon-gradient"></i><!--Call to action-->
+             <h5><span style="color: #2c3e50;"><strong>IMC médio a cada 10 anos</strong></span></h5>
+             </section></div>
+            </a>
+             <br/>
+              <br/>
+            <a href="http://localhost:8080/mostraObeso" class="card bg-transparent text-white text-center p-3">
+             <div class="log"><section class="loginUser"><!--avatar - icon font awesome-->
+             <i class="fa fa-flask fa-3x fa-pb_icon-gradient"></i><!--Call to action-->
+             <h5><span style="color: #2c3e50;"><strong>Percentual de Obeso M e F</strong></span></h5>
+             </section></div>
+            </a>
+             <br/>
+              <br/>
+            <a href="http://localhost:8080/mostraMedia" class="card bg-transparent text-white text-center p-3">
+             <div class="log"><section class="loginUser"><!--avatar - icon font awesome-->
+             <i class="fa fa-flask fa-3x fa-pb_icon-gradient"></i><!--Call to action-->
+             <h5><span style="color: #2c3e50;"><strong>Média idade por tipo Sanguineo</strong></span></h5>
+             </section></div>
+            </a>
+            <br/>
+              <br/>
+            <a href="http://localhost:8080/mostraPossivel" class="card bg-transparent text-white text-center p-3">
+             <div class="log"><section class="loginUser"><!--avatar - icon font awesome-->
+             <i class="fa fa-flask fa-3x fa-pb_icon-gradient"></i><!--Call to action-->
+             <h5><span style="color: #2c3e50;"><strong>A quantidade de possíveis doadores para cada tipo sanguíneo receptor</strong></span></h5>
+             </section></div>
+            </a>
+            <div th:if="${message}">
+                 <h2 th:text="${message}"/>
+            </div>
+            </div>
+             </div>
+              
+             <script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+             <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+            
+      </body>
+</html>

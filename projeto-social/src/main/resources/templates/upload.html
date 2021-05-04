@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+    <link th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" rel="stylesheet"/>
+     <link th:href="@{/webjars/bootstrap/css/bootstrap-theme.min.css}" rel="stylesheet"/>
+    
+<style>
+
+  body {
+       background-color: #98fb98;
+    }
+    .row{
+      margin-left: 120px;
+    }
+    input {
+           margin-left: 550px;
+	       margin-right: 20px;
+	       margin-bottom: 20px;
+     }
+     button {
+	margin-left: 550px;
+	color: 3cb317;
+	background-color: 3cb371;
+     }
+     
+     body h4{
+       margin-left: 530px;
+    }
+
+     .panel-heading{
+            color: 3cb371;
+     }
+     .panel-title{
+               font : normal;
+               font-size : 20px;
+               text-align: center;
+     }
+    .panel-body{
+    color: 4caf50;
+    }
+    .boto{
+         margin-left: 550px;
+    }
+    
+</style>
+<body>
+  <div class="panel panel-primary" style="margin: 10px">
+   <div class="panel-heading">
+       <h1 class="panel-title">SELECT JSON</h1>
+   </div>
+  <hr/>
+  <h4>Upload Single File:</h4>
+  <div class="panel-body">
+  <form class="form-inline" method="POST" th:action="@{/uploadFile}" enctype="multipart/form-data">
+    <input type="file" name="file"/> <br/><br/>
+    <button type="submit">Submit</button>
+    <br/>
+    <br/>
+  </form>
+  <br/>
+    <br/>
+    <br/>
+    <br/>
+  <hr/>
+  
+  <div th:if="${message}">
+    <h2 th:text="${message}"/>
+  </div>
+  </div>
+  </div>
+             <script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+             <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+  
+</body>
+</html>
